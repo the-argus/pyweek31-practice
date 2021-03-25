@@ -9,8 +9,8 @@ https://docs.python.org/3/tutorial/venv.html
 Install requirements with:<br>
 `pip install -r requirements.txt`
 
-Run app: <br>
-`python app.py`
+Run game: <br>
+`python run_game.py`
 
 ## Setup with docker
 Install docker: <br>

@@ -1,0 +1,4 @@
+SCREEN_TITLE = "Pyweek 31 Practice Project"
+
+SCREEN_WIDTH = 720
+SCREEN_HEIGHT = 480

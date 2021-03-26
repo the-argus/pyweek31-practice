@@ -1,7 +1,7 @@
 import arcade
 import math
 
-from Constants.Game import SCREEN_WIDTH, SCREEN_HEIGHT
+from constants.game import SCREEN_WIDTH, SCREEN_HEIGHT
 
 class GameInstance:
     """
@@ -16,7 +16,7 @@ class GameInstance:
         self.screensize = 1920,1080
 
         # Physics engine
-        self.physics_engine = setup_physics_engine(self.game_resources)
+        #self.physics_engine = setup_physics_engine(self.game_resources)
 
         self.horizontal_key_list = []
         self.verticle_key_list = []

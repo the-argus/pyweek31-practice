@@ -32,6 +32,9 @@ class GameWindow(arcade.Window):
         window_size = self.get_size()
         self.game_instance = GameInstance(self)
 
+        # Set the background color
+        arcade.set_background_color(arcade.color.AMAZON)
+
     def on_key_press(self, key, modifiers):
         """Called whenever a key is pressed. """
         self.game_instance.on_key_press(key, modifiers)
@@ -60,7 +63,8 @@ class GameWindow(arcade.Window):
 
     def on_draw(self):
         """ Draw everything """
-        pass
+        arcade.start_render()
+
 
 def main():
     """ Main method """

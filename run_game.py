@@ -64,6 +64,7 @@ class GameWindow(arcade.Window):
     def on_draw(self):
         """ Draw everything """
         arcade.start_render()
+        self.game_instance.on_draw()
 
 
 def main():

@@ -21,6 +21,17 @@ class GameInstance:
         self.horizontal_key_list = []
         self.verticle_key_list = []
 
+        self.grid_size = (16,9) #width/height
+        self.grid_lines = []
+        for j in range(int(self.grid_size[0])):
+            line_slot = (SCREEN_WIDTH/self.grid_size[0])*j
+            self.grid_lines.append((line_slot,0))
+            self.grid_lines.append((line_slot,SCREEN_HEIGHT))
+        for j in range(int(self.grid_size[1])):
+            line_slot = (SCREEN_HEIGHT/self.grid_size[1])*j
+            self.grid_lines.append((0,line_slot))
+            self.grid_lines.append((SCREEN_WIDTH,line_slot))
+
     def on_key_press(self, key, modifiers):
         """Called whenever a key is pressed. """
         #toggle fullscreen
@@ -46,7 +57,7 @@ class GameInstance:
         pass
 
     def on_draw(self):
-        pass
+        arcade.draw_lines(self.grid_lines, arcade.color.BLACK, 3);
 
     def on_draw_scene(self):
         pass

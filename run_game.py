@@ -32,6 +32,9 @@ class GameWindow(arcade.Window):
         window_size = self.get_size()
         self.game_instance = GameInstance(self)
 
+        # Set the background color
+        arcade.set_background_color(arcade.color.AMAZON)
+
     def on_key_press(self, key, modifiers):
         """Called whenever a key is pressed. """
         self.game_instance.on_key_press(key, modifiers)
@@ -47,7 +50,6 @@ class GameWindow(arcade.Window):
         scaleddx = (dx/self.screensize_multiplier)
         scaleddy = (dy/self.screensize_multiplier)
         self.game_instance.on_mouse_motion(scaledx, scaledy, dx, dy)
-        self.game_instance.game_resources.player_sprite.on_mouse_motion(scaledx, scaledy, scaleddx, scaleddy)
 
     def on_mouse_press(self, x, y, button, modifiers):
         """passes mouse info to the gameinstance on_mouse_press but properly scaled to any screensize changes"""
@@ -61,7 +63,8 @@ class GameWindow(arcade.Window):
 
     def on_draw(self):
         """ Draw everything """
-        pass
+        arcade.start_render()
+
 
 def main():
     """ Main method """
@@ -69,15 +72,6 @@ def main():
     window.setup()
     arcade.run()
 
-
-def load_texture_pair(filename):
-    """
-    Load a texture pair, with the second being a mirror image.
-    """
-    return [
-        arcade.load_texture(filename),
-        arcade.load_texture(filename, flipped_horizontally=True),
-    ]
 
 if __name__ == "__main__":
     main()

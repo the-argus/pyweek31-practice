@@ -1,4 +1,1 @@
 arcade
-#imgui
-math
-#pymunk==5.7.0

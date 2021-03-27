@@ -11,16 +11,3 @@ Install requirements with:<br>
 
 Run game: <br>
 `python run_game.py`
-
-## Setup with docker
-Install docker: <br>
-https://docs.docker.com/get-docker/
-
-Create image: <br>
-`docker build --rm -t pyweek .`
-
-Start container and run app: <br>
-`docker run -ti --net=host -e DISPLAY -v /tmp/.X11-unix pyweek python3 app.py`
-
-If that doesn't work I used this link for reference: <br>
-https://www.tutorialspoint.com/running-gui-applications-on-docker-in-linux
